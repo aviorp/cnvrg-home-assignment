@@ -1,0 +1,27 @@
+<%= form_with(model: driver_car) do |form| %>
+  <% if driver_car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(driver_car.errors.count, "error") %> prohibited this driver_car from being saved:</h2>
+
+      <ul>
+        <% driver_car.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :driver_id %>
+    <%= form.text_field :driver_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :car_id %>
+    <%= form.text_field :car_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
