@@ -69,8 +69,6 @@ export default {
         this.$emit("toggle-loading", false);
         console.error(error);
       }
-
-      console.log(response);
     },
   },
 };
