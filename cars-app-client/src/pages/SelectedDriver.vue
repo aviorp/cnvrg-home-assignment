@@ -4,7 +4,7 @@
 
 <script>
 import SelectedItem from "@/components/SelectedItem.vue";
-import { getDriverById } from "@/api";
+import { getDriverById } from "@/core/api";
 export default {
   name: "SelectedCar",
   components: {
@@ -15,10 +15,8 @@ export default {
       driver: null,
     };
   },
-
   async created() {
     this.driver = await getDriverById(this.$route.params.id);
   },
 };
 </script>
-

@@ -7,7 +7,7 @@
       </template>
       <template #title>{{ nav.title }} </template>
       <template #action-buttons>
-        <button class="card-button" @click="$router.replace(nav.route)">
+        <button class="card-button" @click="$router.push(nav.route)">
           Select
         </button>
       </template>
@@ -39,6 +39,7 @@ export default {
       },
       { title: "Cars List", route: { name: "CarsList" }, img: "car.svg" },
       { title: "Drivers & Cars", route: { name: "DriversAndCars" }, img: "together.svg" },
+      { title: "Drivers & Cars Attachments", route: { name: "Attachments" }, img: "data_binding.svg" },
     ],
   }),
 };

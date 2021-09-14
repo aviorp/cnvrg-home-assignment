@@ -8,7 +8,7 @@
       />
 
       <h1>
-        {{ item.name }}&nbsp; &middot;
+        <span v-if="item.name">{{ item.name }}</span> &nbsp; &middot;
         <span>{{ type === TYPES.driver ? item.email : item.carType }}</span>
       </h1>
     </header>
@@ -50,7 +50,7 @@
 <script>
 import PageLayout from "../layouts/PageLayout.vue";
 import SectionLayout from "../layouts/SectionLayout.vue";
-import DriverDefault from '@/assets/driver.svg'
+import DriverDefault from "@/assets/driver.svg";
 import { TYPES } from "@/utils";
 export default {
   components: { PageLayout, SectionLayout },
@@ -58,8 +58,8 @@ export default {
   data() {
     return {
       TYPES,
-      DriverDefault
-    }
+      DriverDefault,
+    };
   },
   props: {
     type: {

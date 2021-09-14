@@ -10,12 +10,12 @@ const routes = [
     redirect: {
       name: "Home"
     },
-    component: () => import('../layouts/MainLayout.vue'),
+    component: () => import('@/layouts/MainLayout.vue'),
     children: [
       {
         path: '/',
         name: 'Home',
-        component: () => import('../pages/Home.vue'),
+        component: () => import('@/pages/Home.vue'),
         meta: {
           title: "Home Page"
         },
@@ -24,7 +24,7 @@ const routes = [
       {
         path: 'cars',
         name: 'CarsList',
-        component: () => import('../pages/CarsList.vue'),
+        component: () => import('@/pages/CarsList.vue'),
         meta: {
           title: "Cars List"
         }
@@ -32,7 +32,7 @@ const routes = [
       {
         path: 'drivers',
         name: 'DriversList',
-        component: () => import('../pages/DriversList.vue'),
+        component: () => import('@/pages/DriversList.vue'),
         meta: {
           title: "Drivers List"
         }
@@ -40,7 +40,7 @@ const routes = [
       {
         path: 'select-form',
         name: 'Forms',
-        component: () => import('../pages/Forms.vue'),
+        component: () => import('@/pages/Forms.vue'),
         meta: {
           title: "Select Form"
         }
@@ -49,7 +49,7 @@ const routes = [
       {
         path: 'cars/:id',
         name: 'SelectedCar',
-        component: () => import('../pages/SelectedCar.vue'),
+        component: () => import('@/pages/SelectedCar.vue'),
         meta: {
           title: "Selected Car"
         },
@@ -57,7 +57,7 @@ const routes = [
       {
         path: 'drivers/:id',
         name: 'SelectedDriver',
-        component: () => import('../pages/SelectedDriver.vue'),
+        component: () => import('@/pages/SelectedDriver.vue'),
         meta: {
           title: "Selected Driver"
         },
@@ -67,7 +67,7 @@ const routes = [
       {
         path: 'form',
         name: 'SelectedForm',
-        component: () => import('../pages/SelectedForm.vue'),
+        component: () => import('@/pages/SelectedForm.vue'),
         meta: {
           title: "Form"
         }
@@ -76,14 +76,22 @@ const routes = [
       {
         path: 'drivers-and-cars',
         name: 'DriversAndCars',
-        component: () => import('../pages/DriversAndCars.vue'),
+        component: () => import('@/pages/DriversAndCars.vue'),
         meta: {
           title: "Drivers & Cars"
         }
       },
       {
+        path: 'attachments',
+        name: 'Attachments',
+        component: () => import('@/pages/Attachments.vue'),
+        meta: {
+          title: "Drivers & Cars Attachments"
+        }
+      },
+      {
         path: '*',
-        component: () => import('../pages/Home.vue'),
+        component: () => import('@/pages/Home.vue'),
         meta: {
           title: "Home Page"
         }

@@ -23,7 +23,7 @@
 import Appbar from "@/components/Appbar.vue";
 import Sidebar from "@/components/Sidebar.vue";
 import Loading from "@/components/Loading.vue";
-import { getDrivers, getCars } from "@/api";
+import { getDrivers, getCars } from "@/core/api";
 export default {
   name: "MainLayout",
   components: { Appbar, Sidebar, Loading },
@@ -74,7 +74,6 @@ export default {
       this.sidebar = condition;
     },
     onToggleLoading(condition) {
-      console.log("HERE")
       this.isLoading = condition;
     },
     async initApp() {
@@ -82,10 +81,9 @@ export default {
         this.isLoading = true;
         this.cars = await getCars();
         this.drivers = await getDrivers();
-
-        await console.log(this.cars, this.drivers);
       } catch (error) {
         console.error(error);
+        this.isLoading = false;
       } finally {
         this.isLoading = false;
       }

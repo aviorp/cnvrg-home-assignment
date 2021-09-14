@@ -12,3 +12,11 @@ export const toBase64 = file => new Promise((resolve, reject) => {
 export const awnOptions = {
     position: "bottom-left",
 }
+
+
+export const normalizer = (node) => {
+    return {
+        id: node.id,
+        label: node.name,
+    }
+};

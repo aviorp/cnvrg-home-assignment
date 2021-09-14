@@ -57,3 +57,11 @@ export const createDriver = async (payload) => {
         console.error(error);
     }
 }
+
+export const attachDriversAndCars = async (payload) => {
+    try {
+        const { data } = await api.post('/driver_cars', payload)
+    } catch (error) {
+        console.error(error)
+    }
+}

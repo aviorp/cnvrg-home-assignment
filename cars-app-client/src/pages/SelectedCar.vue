@@ -4,7 +4,7 @@
 
 <script>
 import SelectedItem from "@/components/SelectedItem.vue";
-import { getCarById } from "@/api";
+import { getCarById } from "@/core/api";
 export default {
   name: "SelectedCar",
   components: {

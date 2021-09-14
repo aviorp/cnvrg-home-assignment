@@ -61,7 +61,7 @@
 import PageLayout from "../layouts/PageLayout.vue";
 import SectionLayout from "../layouts/SectionLayout.vue";
 import { TYPES, toBase64 } from "@/utils";
-import { createCar, createDriver } from "@/api";
+import { createCar, createDriver } from "@/core/api";
 
 export default {
   components: { PageLayout, SectionLayout },
